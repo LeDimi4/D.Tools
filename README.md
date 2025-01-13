@@ -1,0 +1,2 @@
+- This is a repo of small tools that i made to streamline some of my day to day work routine tasks.
+- will update this file later.
