@@ -1,0 +1,2 @@
+This little script helps analyze incoming footage of my hamster running in his wheel to decipher whether or not his meds are working.
+In the end it spits out a neat little summary txt with the info of how much time of given video length the hamster was running in the wheel. 
