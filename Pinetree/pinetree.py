@@ -94,6 +94,14 @@ def update_checkboxes():
         if not is_parent:
             folder_vars[folder]["checkbox"].state(["disabled"])
 
+    # Ensure subfolders reflect the current state of their parents on initialization.
+    # Without this, the child checkboxes remain disabled until a parent checkbox is
+    # toggled manually, preventing the user from customising the folder selection
+    # right away.
+    for folder in folder_templates:
+        if any(child.startswith(folder + "/") for child in folder_templates):
+            toggle_subfolders(folder, folder_vars[folder]["var"].get())
+
 # Define folder templates with hierarchical structure
 folder_templates = [
     "assets", "assets/downloaded",
