@@ -1,0 +1,17 @@
+{
+  "manifest_version": 3,
+  "name": "YouTube Shorts AutoScroll",
+  "version": "1.0.0",
+  "description": "Automatically moves to the next YouTube Short when the current one finishes.",
+  "content_scripts": [
+    {
+      "matches": [
+        "https://www.youtube.com/shorts/*"
+      ],
+      "js": [
+        "content.js"
+      ],
+      "run_at": "document_idle"
+    }
+  ]
+}
